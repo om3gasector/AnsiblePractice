@@ -1,0 +1,5 @@
+---
+- name: Add/Rm linux user
+  hosts: localhost
+  roles:
+    - first_setup

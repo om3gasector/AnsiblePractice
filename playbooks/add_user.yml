@@ -1,0 +1,10 @@
+  GNU nano 6.2                      playbook1.yml *                             
+---
+- name: Add user
+  hosts: localhost
+  become: yes
+  user:
+    name: "{{ name }}"
+    password: "{ {  pwd | password_hash('sha512') } }"
+  vars:
+    pwd: "123"
